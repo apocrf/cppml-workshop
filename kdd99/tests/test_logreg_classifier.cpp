@@ -10,7 +10,7 @@
 using kdd99::LogregClassifier;
 using std::clog;
 
-TEST(DISABLED_LogregClassifier, compare_to_python) {
+TEST(LogregClassifier, compare_to_python) {
     std::ifstream istream{"train/logreg_coef.txt"};
     ASSERT_TRUE(istream.is_open());
     auto coef = read_vector(istream);

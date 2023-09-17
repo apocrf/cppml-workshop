@@ -8,8 +8,8 @@
 #include <poly_predictor.h>
 #include <helpers.h>
 
-TEST(DISABLED_LinregPredictor, compare_to_python) {
-    std::vector<double> coef = {0, 0};
+TEST(LinregPredictor, compare_to_python) {
+    std::vector<double> coef = {0.8487542763699397, 1.739934247832123};
 
     auto predictor = LinregPredictor{coef};
 
@@ -29,7 +29,7 @@ TEST(DISABLED_LinregPredictor, compare_to_python) {
     }
 }
 
-TEST(DISABLED_LinregPredictor, multi_features) {
+TEST(LinregPredictor, multi_features) {
     std::ifstream istream{"train/linreg_multi_coef.txt"};
     auto coef = read_vector(istream);
     istream.close();

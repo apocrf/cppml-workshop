@@ -58,11 +58,16 @@ MlpClassifier::probas_t MlpClassifier::predict_proba(const features_t& feat) con
         x[i] = feat[i] / 255;
     }
 
-    // Add your code here
+    auto z1 = w1_ * x;
+    auto o1 = sigmav(z1);
+    auto z2 = w2_ * o1;
+    auto o2 = softmax(z2);
    
     probas_t res;
-    // Add your code here
+    res.reserve(o2.rows());
+    for (size_t i = 0; i < o2.rows(); ++i) {
+        res.push_back(o2(i));
+    }
    
-
     return res;
 }

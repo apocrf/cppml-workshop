@@ -11,5 +11,5 @@ public:
     double predict(const features&) const override;
     
 protected:
-    std::array<double, 2> coef_;
+    std::vector<double> coef_;
 };

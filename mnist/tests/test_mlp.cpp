@@ -13,7 +13,7 @@ const size_t input_dim = 784;
 const size_t hidden_dim = 128;
 const size_t output_dim = 10;
 
-TEST(DISABLED_MlpClassifier, predict_proba) {
+TEST(MlpClassifier, predict_proba) {
     auto w1 = read_mat_from_file(input_dim, hidden_dim, "train/w1.txt");
     auto w2 = read_mat_from_file(hidden_dim, output_dim, "train/w2.txt");
 

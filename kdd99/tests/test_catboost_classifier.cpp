@@ -10,7 +10,7 @@
 using kdd99::CatboostClassifier;
 using std::clog;
 
-TEST(DISABLED_CatboostClassifier, compare_to_python) {
+TEST(CatboostClassifier, compare_to_python) {
     auto predictor = CatboostClassifier{"train/model.cbm"};
 
     auto features = CatboostClassifier::features_t{};
